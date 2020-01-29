@@ -6,8 +6,9 @@
 }
 
 html, body {
-    margin: 0;
-    padding: 0;
+    /* margin: 0;
+    padding: 0; */
+
     background: url(img/fondo.jpg) no-repeat center top fixed;
     background-size: cover;
     width: 100%;
@@ -18,11 +19,6 @@ html, body {
     padding-top: 6em;
     min-height: 95vh;
     flex-wrap: wrap; 
-
-}
-.candies-fichas-pokemon {
-    /* border: 5px dotted blue; */
-    display: block;
 }
 
 .header {
@@ -32,8 +28,8 @@ html, body {
     width: 100%;
     height: auto;
     z-index: 3;
-    
-}      
+}
+
 .header ul {
     margin: 0;
     padding: 0 0 1em 0;
@@ -66,7 +62,6 @@ padding-top: 1em;
 }
 
 /* menu icon */
-
 .header .menu-icon {
     cursor: pointer;
     display: inline-block;
@@ -77,7 +72,6 @@ padding-top: 1em;
 }
 
 .header .menu-icon .navicon {
-
     display: block;
     height: .3em;
     position: relative;
@@ -98,13 +92,84 @@ padding-top: 1em;
     width: 2rem;
     border-radius: .5em;
 }
-
 .header .menu-icon .navicon:before {
         top: .5em;
 }
-
 .header .menu-icon .navicon:after {
         top: -1em;
+
+}
+/* menu btn */
+.header .menu-btn {
+        display: none;
+}
+.header .menu-btn:checked ~ .menu {
+max-height: 15em;
+align-items: center;
+        
+}
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+/* responsive */
+@media (min-width: 55em) {
+    .header li {
+      float: left;
+    }
+    .header ul {
+      padding: 1em 1.5em 1em 0; 
+    }
+    .header .menu {
+        clear: none;
+        align-items: center;
+        max-height: none;
+    }
+    .header .menu-icon {
+        display: none;
+    }
+}
+/* Estilo botones e inputs*/
+.btn {
+    border-radius: 5em;
+    font-size: 1em;
+    width: 15em;
+    padding: .8em;
+    color: white;
+}
+.btn .input{
+    max-width: 15em;
+    background: red;
+}
+.form .label{
+    display:inline;
+    margin: 0 0 1em 0;
+    clear: both;
+}
+::placeholder {
+    color: gray;
+    
+}
+
+/* .filtro {
+    border-radius: 50px;
+    font-size: 14px;
+    width: 100%;
+    padding: 1em;
+} */
+.candies-fichas-pokemon {
+    /* border: 5px dotted blue; */
+    display: block;
+
 }
 /* menu btn */
 .header .menu-btn {
@@ -149,9 +214,8 @@ align-items: center;
 
 .selector-filtro-wrap {
     display: flex;
-    border: 9px dashed green;
-    padding: 15px 15px;
-    height: 100%
+    /* border: 9px dashed green; */
+
     
 }
 
@@ -207,7 +271,6 @@ color:purple;
 }
 ::placeholder {
     color: gray;
-    
 }
 
 .footer {
@@ -220,8 +283,6 @@ color:purple;
     font-size: 12px;
     text-align: center;
 }
-
-
 
 .fondo-pokemon img {
     background: url(img/f.png);
@@ -373,3 +434,4 @@ div[name="pokemon"] p:first-of-type {
     border-bottom: 1px solid lightblue;
     padding-bottom: .5em;
 }
+

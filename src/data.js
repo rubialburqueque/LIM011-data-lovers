@@ -6,7 +6,6 @@ export const busquedaPokemonNombre = (data, nombre) => data.filter((item) => ite
 export const filtroAlfabeticoAZ = (data) => data.sort((a, b) => a.name.localeCompare(b.name));
 export const filtroAlfabeticoZA = (data) => data.sort((a, b) => b.name.localeCompare(a.name));
 export const ordenNumerico = (data) => data.sort((a, b) => a.num.localeCompare(b.num));
-
 export const evolucionCaramelos = (data, nombre, candyUsuario) => {
   let candy = 0;
   let arreglo = [];
@@ -35,4 +34,3 @@ export const evolucionCaramelos = (data, nombre, candyUsuario) => {
     }
   } return arreglo;
 };
-
